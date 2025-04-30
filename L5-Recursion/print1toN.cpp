@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
-int i = 1;
-void print1toN(int n)
+
+void print1toN(int i, int n)
 {
-    cout << i;
-    if (i == n)
+    if (i > n)
     {
         return;
     }
-    i++;
-    print1toN(n);
+    cout << i << endl;
+    print1toN(i + 1, n);
 }
 
 int main()
@@ -18,5 +17,5 @@ int main()
     cout << "Enter number : ";
     cin >> n;
 
-    print1toN(n);
+    print1toN(1, n);
 }
