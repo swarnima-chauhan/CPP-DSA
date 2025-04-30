@@ -3,12 +3,12 @@ using namespace std;
 
 void printNto1(int i, int n)
 {
-    if (n < i)
+    if (i < 1)
     {
         return;
     }
-    cout << n << endl;
-    printNto1(1, n - 1);
+    cout << i << endl;
+    printNto1(i - 1, n);
 }
 
 int main()
@@ -17,5 +17,5 @@ int main()
     cout << "Enter number : ";
     cin >> n;
 
-    printNto1(1, n);
+    printNto1(n, n);
 }
